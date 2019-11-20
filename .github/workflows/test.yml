@@ -8,8 +8,8 @@ jobs:
       matrix:
         os: [ubuntu-18.04]
     steps:
-      - name: Configure machine 
-        uses: mjcarroll/action-setup-ign@releases/v1
+      - uses: mjcarroll/action-setup-ign@releases/v1
+      - uses: actions/checkout@v1
       - name: Build
         run: |
           mkdir build
