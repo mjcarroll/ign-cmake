@@ -10,5 +10,10 @@ jobs:
     steps:
       - name: Configure machine 
         uses: mjcarroll/action-setup-ign@releases/v1
-      - name: echo
-        run: echo 'Asdf'
+      - name: Build
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          make
+          make install
