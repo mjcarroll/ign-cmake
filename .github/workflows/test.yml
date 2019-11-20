@@ -1,0 +1,14 @@
+name: Test ign-cmake
+on: [push]
+
+jobs:
+  build_and_test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-18.04]
+    steps:
+      - name: Configure machine 
+        uses: mjcarroll/action-setup-ign@releases/v1
+      - name: echo
+        run: echo 'Asdf'
